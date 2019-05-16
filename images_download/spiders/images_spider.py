@@ -21,7 +21,7 @@ class ImagesSpider(Spider):
     def parse_images(self, response):
         item = ImagesDownloadItem()
         url_list = response.xpath(".//li[@class='list']/a/img/@data-original").extract()
-        item["images_urls"] = url_list
+        item["image_urls"] = url_list
         yield item
 
         # 下一页

@@ -11,5 +11,5 @@ import scrapy
 class ImagesDownloadItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
-    images_urls = scrapy.Field()  # 图片url地址
+    image_urls = scrapy.Field()  # 图片url地址
     images = scrapy.Field()  # 下载后的结果
