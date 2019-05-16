@@ -1,0 +1,13 @@
+1.setting.py
+ 19行  USER_AGENT = 'images_download (+http://www.yourdomain.com)'  可定义许多不同的浏览器
+ 22行  ROBOTSTXT_OBEY = False
+ 67行  ITEM_PIPELINES = {
+   'images_download.pipelines.ImagesDownloadPipeline': 300,
+    'scrapy.pipelines.image.ImagesPipeline':200
+}
+94行 IMAGES_STORE = './摄图网图片'
+
+2.items.py [mark Directory as * Resource root   # 存储为根目录]
+ 14 行  对应的名称
+  image_urls = scrapy.Field()#图片url地址
+    images = scrapy.Field()#下载后的结果
